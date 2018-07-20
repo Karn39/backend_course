@@ -7,7 +7,7 @@ requestHandler = (request, response) => {
     // 1. 看看自己的url及method
     console.log("this request from " + request.url);
     console.log("this request method: " + request.method);
-    
+
     // 2. 塞個response header
     response.setHeader("Content-Type", "application/json");
 
@@ -25,4 +25,4 @@ const server = http.createServer(requestHandler);
 // http.createServer = https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#create-the-server
 
 //啟動server並使用3000的port.
-server.listen(3000);
+server.listen(5000);

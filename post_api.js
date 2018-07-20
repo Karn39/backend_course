@@ -24,13 +24,13 @@ requestHandler = (request, response) => {
 
     }).on('end', () => { //在end event觸發後，透過querystring模組來將post的資料剖析成POST method的request格式，並向client端返回資料.
         // console.log("origin: " + typeof (getDatas));
-        // console.log('origin: ' + getDatas)
+         console.log('origin: ' + getDatas)
         // 2. 使用querystring parse來解析資料格式為Object格式
         getDatas = queryString.parse(getDatas.toLocaleString());
         // queryString.parse = https://nodejs.org/api/querystring.html#querystring_querystring_parse_str_sep_eq_options
 
         // console.log("after: " + typeof (getDatas));
-        // console.log("after: ", getDatas);
+         console.log("after: ", getDatas);
 
         response.end("hi, 我收到了「" + getDatas.test1 + "」的資料了.");
     })
@@ -43,12 +43,12 @@ requestHandler = (request, response) => {
 const server = http.createServer(requestHandler);
 
 //啟動server並使用3000的port.
-server.listen(3000);
+server.listen(5000);
 
 
 //querystring.parse()它是用來將URL中的query string轉成為key跟value的配對。
 
-//example: 
+//example:
 
 // query string: 'test1=hi&test2=all&test3=no&test3=no'
 
