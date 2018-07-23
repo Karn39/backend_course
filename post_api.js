@@ -43,7 +43,7 @@ requestHandler = (request, response) => {
 const server = http.createServer(requestHandler);
 
 //啟動server並使用3000的port.
-server.listen(5000);
+server.listen(3000);
 
 
 //querystring.parse()它是用來將URL中的query string轉成為key跟value的配對。
